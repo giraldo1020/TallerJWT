@@ -17,6 +17,7 @@ class TicketEstadoUpdate(BaseModel):
     # Este esquema es exclusivo para el PATCH /tickets/{id}/estado
     nuevo_estado: str
     observacion: Optional[str] = None # Opcional: por si el técnico o responsable quiere dejar un comentario al cambiar el estado
+    id_asignado: Optional[int] = None
 
 class TicketResponse(TicketBase):
     id_ticket: int
