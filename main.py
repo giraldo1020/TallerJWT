@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from db import engine, Base
-
+from app.routers import auth, usuarios, laboratorios, servicios, tickets
 # Importamos los routers
 from app.routers import auth, usuarios
 
@@ -19,6 +19,10 @@ app = FastAPI(
 # Registramos los routers en la aplicación
 app.include_router(auth.router)
 app.include_router(usuarios.router)
+app.include_router(laboratorios.router)
+app.include_router(servicios.router)
+app.include_router(tickets.router)
+
 
 @app.get("/")
 def read_root():
