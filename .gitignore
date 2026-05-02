@@ -1,0 +1,20 @@
+# Entornos virtuales
+venv/
+env/
+.venv/
+
+# Archivos de configuración con credenciales (¡Súper importante!)
+.env
+
+# Archivos compilados de Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Herramientas de desarrollo (opcional pero recomendado)
+.vscode/
+.idea/
+
+# Logs y bases de datos locales
+*.log
+*.sqlite3
