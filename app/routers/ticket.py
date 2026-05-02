@@ -5,8 +5,8 @@ from datetime import datetime
 from sqlalchemy import or_
 
 from db import get_db
-from app.models import Ticket
-from app.schemas import TicketCreate, TicketResponse, TicketEstadoUpdate
+from app.models.models import Ticket
+from app.schemas.ticket import TicketCreate, TicketResponse, TicketEstadoUpdate
 from app.security.security import get_current_user
 
 router = APIRouter(prefix="/api/tickets", tags=["Tickets"])

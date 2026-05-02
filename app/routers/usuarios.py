@@ -4,10 +4,10 @@ from typing import List
 
 # Importamos la BD y los Modelos
 from db import get_db
-from app.models import Usuario
+from app.models.models import Usuario
 
-# Importamos los Schemas (asegúrate de que la ruta coincida con donde pusiste los esquemas)
-from app.schemas import UsuarioCreate, UsuarioResponse
+# Importamos los Schemas
+from app.schemas.usuario import UsuarioCreate, UsuarioResponse
 
 # Importamos la lógica de seguridad
 from app.security.security import get_password_hash, get_current_user

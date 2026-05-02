@@ -4,7 +4,7 @@ from typing import Optional
 # 1. Esquema Base: Propiedades compartidas
 class UsuarioBase(BaseModel):
     nombre: str
-    correo: EmailStr  # EmailStr valida automáticamente que tenga formato de correo
+    correo: str  # EmailStr valida automáticamente que tenga formato de correo
     rol: str
     activo: bool = True
 

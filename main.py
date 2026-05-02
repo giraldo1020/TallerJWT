@@ -1,8 +1,8 @@
 from fastapi import FastAPI
 from db import engine, Base
-from app.routers import auth, usuarios, laboratorios, servicios, tickets
+from app.routers import auth, usuarios, laboratorio, servicios, ticket
 # Importamos los routers
-from app.routers import auth, usuarios
+from app.models.models import Usuario
 
 # IMPORTANTE: Esto le dice a SQLAlchemy que cree las tablas en la base de datos 
 # si no existen. Ojo: El esquema 'jwt_grupo_3' ya debe haber sido creado por 
@@ -19,9 +19,9 @@ app = FastAPI(
 # Registramos los routers en la aplicación
 app.include_router(auth.router)
 app.include_router(usuarios.router)
-app.include_router(laboratorios.router)
+app.include_router(laboratorio.router)
 app.include_router(servicios.router)
-app.include_router(tickets.router)
+app.include_router(ticket.router)
 
 
 @app.get("/")
