@@ -31,7 +31,7 @@ Se controlan estrictamente las transiciones de estado de los tickets y se valida
 
   Lista de usuarios creados con los diferentes roles:
 
-  ![LIsta de usuarios](img/listar user.jpg)
+  ![lista Usuarios](<img/listar user.jpg>)
 
   Nos logueamos con el usuario solicitante:
 
