@@ -21,7 +21,30 @@ Se controlan estrictamente las transiciones de estado de los tickets y se valida
 * **Tickets:** Eje central del sistema que relaciona usuarios, laboratorios y servicios bajo un flujo de estados controlado.
 
 ## Pruebas
-![alt text](crear_usuario.jpg)
+
+  Se crea usuarios para validar flujo:
+
+  ![alt text](img/crear_usuario.jpg) [alt text](README.md)
+  
+
+  ![Validando Creacion](validacion_creacion.jpg)
+
+  Lista de usuarios creados con los diferentes roles:
+
+  ![LIsta de usuarios](<listar user.jpg>)
+
+  Nos logueamos con el usuario solicitante:
+
+  ![Login Solicitante](login_solicitante.jpg)
+
+  Se crea ticket con el usuario con el rol de solicitante:
+
+  ![Creacion Ticket](soli-crea-ticket.jpg)
+
+  No se permite que el solicitante cambie los estados de la solicitud:
+
+  ![No permite modificar estado](soli-no_permite.jpg)
+
 
 
 ## Conclusiones
