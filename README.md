@@ -24,26 +24,26 @@ Se controlan estrictamente las transiciones de estado de los tickets y se valida
 
   Se crea usuarios para validar flujo:
 
-  ![alt text](img/crear_usuario.jpg) [alt text](README.md)
+  ![usuario](img/crear_usuario.jpg)
   
 
-  ![Validando Creacion](validacion_creacion.jpg)
+  ![Validar](img/validacion_creacion.jpg)
 
   Lista de usuarios creados con los diferentes roles:
 
-  ![LIsta de usuarios](<listar user.jpg>)
+  ![LIsta de usuarios](img/listar user.jpg)
 
   Nos logueamos con el usuario solicitante:
 
-  ![Login Solicitante](login_solicitante.jpg)
+  ![Login Solicitante](img/login_solicitante.jpg)
 
   Se crea ticket con el usuario con el rol de solicitante:
 
-  ![Creacion Ticket](soli-crea-ticket.jpg)
+  ![Creacion Ticket](img/soli-crea-ticket.jpg)
 
   No se permite que el solicitante cambie los estados de la solicitud:
 
-  ![No permite modificar estado](soli-no_permite.jpg)
+  ![No permite modificar estado](img/soli-no_permite.jpg)
 
 
 
