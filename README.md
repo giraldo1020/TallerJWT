@@ -20,12 +20,18 @@ Se controlan estrictamente las transiciones de estado de los tickets y se valida
 * **Servicios:** Tipos de soporte técnico ofrecidos.
 * **Tickets:** Eje central del sistema que relaciona usuarios, laboratorios y servicios bajo un flujo de estados controlado.
 
-## 3. Configuración del Entorno
+## Pruebas
+![alt text](crear_usuario.jpg)
 
-Sigue estos pasos para ejecutar el proyecto localmente:
 
-1. **Clonar el repositorio:**
-   ```bash
-   git clone [URL_DEL_REPOSITORIO]
-   cd taller3_fastapi
+## Conclusiones
+* **Principales Aprendizajes:** 
+  Comprendimos cómo aislar la lógica de seguridad usando el sistema de dependencias de FastAPI (`Depends` y `Security`). Aprendimos que el botón "Authorize" de Swagger implementa el flujo OAuth2 enviando las credenciales como formulario (`x-www-form-urlencoded`) y cómo el token generado se inyecta automáticamente en las cabeceras HTTP (`Authorization: Bearer`) de las peticiones subsecuentes.
 
+* **Dificultades Encontradas:** 
+  1. **Aislamiento de Base de Datos:** Garantizar que los modelos de SQLAlchemy apuntaran exclusivamente al esquema `jwt_grupo_3` y no al `public` por defecto.
+  2. **Incompatibilidad de Librerías de Hashing:** Al intentar utilizar `passlib`, nos enfrentamos a un conflicto interno de la librería con las versiones recientes de `bcrypt`, el cual generaba un error de límite de 72 bytes al intentar validar contraseñas debido a un bug de prueba interno de `passlib`.
+
+* **Soluciones Aplicadas:** 
+  1. **Esquema explícito:** Aplicamos el parámetro `__table_args__ = {"schema": "jwt_grupo_3"}` en cada clase de SQLAlchemy para forzar el mapeo estricto al esquema asignado.
+  2. **Bypass de Passlib:** Ante la falta de mantenimiento de `passlib`, decidimos implementar el hashing seguro invocando directamente la librería oficial `bcrypt` (`bcrypt.gensalt()` y `bcrypt.hashpw()`), cumpliendo con el estándar de seguridad exigido de una forma más moderna, directa y libre de bugs.
